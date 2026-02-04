@@ -7,8 +7,13 @@ function App() {
     <div className="App">
       <div className="container">
         <Weather />
+        <footer>
+          This project is coded by Shalini.J 
+          open sourced in Github and hosted by Netlify
+        </footer>
       </div>
     </div>
+  
   );
 }
 

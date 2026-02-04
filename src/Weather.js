@@ -9,12 +9,12 @@ export default function Weather(){
                        <div className="col-8">
                          <input type="search" 
                          placeholder="Enter a city name.."
-                         className="long-button"/>
+                         className="long-button w-100" autoFocus="on"/>
                        </div>
                        <div className="col-4">
                            <input type="submit" 
                             value="Search" 
-                            className="btn btn-primary" />
+                            className="btn btn-primary w-100" />
                        </div>
                 </div>
             </form>
@@ -25,10 +25,14 @@ export default function Weather(){
             </ul>
             <div className="row">
                 <div className="col-6">
-                    <img src="https://www.gstatic.com/weather/conditions/v1/svg/sunny_light.svg" 
-                    alt="Mostly Sunny" />
-                    25°C
-
+                    <div className="clearfix">
+                        <img src="https://www.gstatic.com/weather/conditions/v1/svg/sunny_light.svg" 
+                        alt="Mostly Sunny" />
+                        <div className="float-left">
+                           <span className="temperature">25</span>
+                           <span className="units">°C</span>
+                        </div>
+                    </div>
                 </div>
                 <div className="col-6">
                  <ul>
