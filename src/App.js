@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity="Australia"/>
         <footer>
           This project is coded by Shalini.J 
           open sourced in Github and hosted by Netlify
