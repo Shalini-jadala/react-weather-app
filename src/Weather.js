@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import axios from "axios";
 import "./Weather.css";
+import DisplayDate from "./DisplayDate";
 
 
 export default function Weather(props){
@@ -12,7 +13,7 @@ export default function Weather(props){
         temperature: response.data.temperature.current,
         humidity: response.data.temperature.humidity,
         description: response.data.condition.description,
-        date: "Wednesday 07:00",
+        date: new Date(response.data.time * 1000),
         iconUrl: "https://www.gstatic.com/weather/conditions/v1/svg/sunny_light.svg",
         wind: response.data.wind.speed,
         city: response.data.city
@@ -39,7 +40,9 @@ export default function Weather(props){
             </form>
             <h1>{weatherData.city}</h1>
             <ul>
-                <li>{weatherData.date}</li>
+                <li>
+                    <DisplayDate date={weatherData.date} />
+                </li>
                 <li>{weatherData.discription}</li>
             </ul>
             <div className="row">
