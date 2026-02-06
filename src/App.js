@@ -9,7 +9,7 @@ function App() {
         <Weather defaultCity="Australia"/>
         <footer>
           This project is coded by <a href="https://github.com/Shalini-jadala" className="links"> Shalini.J</a>{" "}
-          open sourced in <a href="https://github.com/Shalini-jadala/react-weather-app" className="links"> Github</a> and hosted by<a href=" " className="links">{" "}Netlify</a> 
+          open sourced in <a href="https://github.com/Shalini-jadala/react-weather-app" className="links"> Github</a> and hosted by<a href="https://lively-pudding-de2a4f.netlify.app/ " className="links">{" "}Netlify</a> 
         </footer>
       </div>
     </div>
