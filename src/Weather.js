@@ -1,7 +1,8 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+
 
 
 export default function Weather(props){
@@ -15,29 +16,30 @@ export default function Weather(props){
         humidity: response.data.temperature.humidity,
         description: response.data.condition.description,
         date: new Date(response.data.time * 1000),
-        iconUrl: "https://www.gstatic.com/weather/conditions/v1/svg/sunny_light.svg",
+        icon: response.data.condition.icon,
         wind: response.data.wind.speed,
         city: response.data.city
     });
 
     }
 
-    function Search(){
-        let apiKey = "0a8c6e7ct4a98df4436abe8fo0c14f17";
-        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-        axios.get(apiUrl).then(handleResponse);
-
-    }
-
+   
     function handleSubmit(event){
         event.preventDefault();
-        Search(city);
+        Search();
 
     }
 
     function handleCityChange(event){
         setCity(event.target.value);
 
+
+    }
+ function Search(){
+        let apiKey = "0a8c6e7ct4a98df4436abe8fo0c14f17";
+        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(handleResponse);
+        
 
     }
 
@@ -66,6 +68,7 @@ export default function Weather(props){
     );       
 
     } else{
-return "Loading....";
+        Search();
+        return "Loading....";
     }
 }
