@@ -1,11 +1,12 @@
 
 .WeatherForecast {
     text-align: center;
-    gap: 8px;
+    gap: 10px;
+    padding-top: 18px;
 }
 .Temp-min{
     opacity: 0.6;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 
